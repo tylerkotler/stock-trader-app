@@ -1,0 +1,79 @@
+{
+    "configurations": [
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "stock-trader-app:StockTradingStateMachine",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/stock-trader-app/template.yaml",
+                "logicalId": "StockTradingStateMachine"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {},
+                "runtime": "python3.8"
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "stock-trader-app:StockCheckerFunction (python3.8)",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/stock-trader-app/template.yaml",
+                "logicalId": "StockCheckerFunction"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {},
+                "runtime": "python3.8"
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "stock-trader-app:StockSellerFunction (python3.8)",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/stock-trader-app/template.yaml",
+                "logicalId": "StockSellerFunction"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {},
+                "runtime": "python3.8"
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "stock-trader-app:StockBuyerFunction (python3.8)",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/stock-trader-app/template.yaml",
+                "logicalId": "StockBuyerFunction"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {},
+                "runtime": "python3.8"
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "stock-trader-app:TransactionTable",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/stock-trader-app/template.yaml",
+                "logicalId": "TransactionTable"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {},
+                "runtime": "python3.8"
+            }
+        }
+    ]
+}
